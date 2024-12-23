@@ -1,14 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Winter Wonderland</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advent Calendar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/R.png" type="image/png">
+
 </head>
 <body>
-    <header>
-        <h1>Winter!</h1>
-    </header>
+    
+        <header>
+            <center><h1>Countdown to Christmas!</h1></center>
+            <center><p style="color: red; font-size: 20px;">"May your days be merry and bright!"</p></center>
+        
+        </header>
+        
+        <div class="countdown-container" >
+            <div class="countdown-item" style="margin-bottom: 5%;margin-left: 15%;" id="countdown">
+                <div class="number" id="months" style="background-color: blue;">0</div>
+                <div class="text">Months</div>
+                <div class="number" id="days" style="background-color: green;">0</div>
+                <div class="text">Days</div>
+                <div class="number" id="hours" style="background-color: rgb(255, 140, 0);">0</div>
+                <div class="text">Hours</div>
+                <div class="number" id="mins" style="background-color: red;">0</div>
+                <div class="text">Minutes</div>
+                <div class="number" id="secs" style="background-color: gold;">0</div>
+                <div class="text">Seconds</div>
+            </div>
+        </div>
+<header>
+    <center><h1>Advent Calendar!</h1></center>
+</header>
+<div class="advent">
+    <div class="row">
+    <div class="door" data-num="1">Dec. 1</div>
+    <div class="door" data-num="2">Dec. 2</div>
+    <div class="door" data-num="3">Dec. 3</div>
+    <div class="door" data-num="4">Dec. 4</div>
+    <div class="door" data-num="5">Dec. 5</div></div>
+
+    <div class="row"><div class="door" data-num="6">Dec. 6</div>
+    <div class="door" data-num="7">Dec. 7</div>
+    <div class="door" data-num="8">Dec. 8</div>
+    <div class="door" data-num="9">Dec. 9</div>
+    <div class="door" data-num="10">Dec. 10</div></div>
+
+    <div class="row"><div class="door" data-num="11">Dec. 11</div>
+    <div class="door" data-num="12">Dec. 12</div>
+    <div class="door" data-num="13">Dec. 13</div>
+    <div class="door" data-num="14">Dec. 14</div>
+    <div class="door" data-num="15">Dec. 15</div></div>
+
+    <div class="row"><div class="door" data-num="16">Dec. 16</div>
+    <div class="door" data-num="17">Dec. 17</div>
+    <div class="door" data-num="18">Dec. 18</div>
+    <div class="door" data-num="19">Dec. 19</div>
+    <div class="door" data-num="20">Dec. 20</div></div>
+
+    <div class="row"><div class="door" data-num="21">Dec. 21</div>
+    <div class="door" data-num="22">Dec. 22</div>
+    <div class="door" data-num="23">Dec. 23</div>
+    <div class="door" data-num="24">Dec. 24</div>
+    <div class="door" data-num="25">Dec. 25</div>
+    </div>
+</div>
+    <div id="santa-sleigh">
+        <img src="images/sant.png" alt="Santa's Sleigh">
+    </div>
+    <div class="modal" id="modal">
+    <div class="modal-content">
+        <div class="modal-wrapper"></div>
+        <span class="close" id="close">&times;</span>
+        <div id="joke-content" style="color:blue;text-align: center;font-size: 200%;"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
