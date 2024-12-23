@@ -84,11 +84,12 @@ document.querySelectorAll('.door').forEach(door => {
         modal.classList.add('opened');
         modal.style.display = "flex";
         this.style.transform = "scale(1.2)";
+        jingleSound.play();
         setTimeout(() => this.style.transform = "scale(1)", 300);}
         setTimeout(() => {
             modalWrapper.style.transform = 'scaleX(0)';
         }, 100);
-        jingleSound.play();
+        
     });
 });
 

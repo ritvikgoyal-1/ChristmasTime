@@ -1,5 +1,5 @@
 header {
-    background-color: #1e90ff;
+    background-color: #ff0000;
     color: white;
     padding: 20px;
     position: relative;
@@ -34,7 +34,10 @@ header {
     gap: 10px;
     padding: 10px;
 }
-
+.countdown-container{
+    width: 100%;
+    background:repeating-linear-gradient(45deg, #f8f9fa, #f8f9fa 10px, #e3f2fd 10px, #e3f2fd 20px);
+}
 @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
 
 body {
@@ -61,7 +64,7 @@ body {
     height: 20%;
     padding: 40px;
     text-align: center;
-    font-size: 18px;
+    font-size: 25px;
     font-family: 'Arial', sans-serif;
     border: 2px solid #ddd;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -69,7 +72,7 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
     margin: 0;
     color: whitesmoke;
-    background: linear-gradient(135deg, #ff7eb3, #fdff8a);
+    background: linear-gradient(135deg, #fa3a3a, #c9ffcc);
     animation: shimmer 1.5s infinite;
     border: 2px solid #f4f4f4;
     border-radius: 10px;
@@ -137,7 +140,7 @@ body {
 
 [data-num="2"] {
     background-color: #388e3c;
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 [data-num="3"] {
@@ -269,7 +272,7 @@ body {
 
 .advent {
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
+    background:repeating-linear-gradient(45deg, #f8f9fa, #f8f9fa 10px, #e3f2fd 10px, #e3f2fd 20px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin-left: 2%;
     margin-right: 2%;
