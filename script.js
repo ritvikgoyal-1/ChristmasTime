@@ -72,6 +72,8 @@ if (today){
 
 document.querySelectorAll('.door').forEach(door => {
     door.addEventListener('click', function() {
+        this.classList.add('door-animation-test');
+        console.log('Door clicked:', this.getAttribute('data-num'));
         const date = new Date();
         const doorNum = parseInt(this.getAttribute('data-num'));
         const doorDate = new Date(date.getFullYear(), 11, doorNum);
@@ -125,15 +127,3 @@ function createSnowflake(headerElement) {
 headers.forEach(header => {
     setInterval(() => createSnowflake(header), 500);
 });
-
-const santaSleigh = document.querySelector('.santa-sleigh');
-const hoHoHo = new Audio("hohoho.mp3");
-
-function animatedSanta(){
-    santaSleigh.style.animation = 'sleigh-move 10s linear';
-    hoHoHo.play();
-    setTimeout(() => {
-        santaSleigh.style.animation = 'none';
-    },10000);
-}
-setInterval(animatedSanta, 15000);
