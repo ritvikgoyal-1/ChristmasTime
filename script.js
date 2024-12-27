@@ -8,16 +8,15 @@ function countdown() {
   const date = new Date();
   const christmas = new Date(date.getFullYear(), 11, 25); 
   
-  if (date > christmas) {
-    christmas.setFullYear(christmas.getFullYear() + 1);
-  }
+
 
   const difference = christmas - date;
-  const monthsLeft = Math.floor(difference / 1000 / 60 / 60 / 24 / 30);
+  const monthsLeft = christmas.getMonth() - date.getMonth() + (12 * (christmas.getFullYear() - date.getFullYear()));
   const days = Math.floor(difference / 1000 / 60 / 60 / 24);
   const hours = Math.floor(difference / 1000 / 60 / 60) % 24;
   const minutes = Math.floor(difference / 1000 / 60) % 60;
   const seconds = Math.floor(difference / 1000) % 60;
+
 
   monthsElement.innerHTML = monthsLeft;
   daysElement.innerHTML = days;
@@ -66,14 +65,10 @@ const joke = document.querySelector('#joke-content');
 modal.style.display = "none";
 const today = new Date().getDate();
 const e = document.querySelector(`[data-num="${today}"]`);
-if (today){
-    e.classList.add('today');
-}
+
 
 document.querySelectorAll('.door').forEach(door => {
     door.addEventListener('click', function() {
-        this.classList.add('door-animation-test');
-        console.log('Door clicked:', this.getAttribute('data-num'));
         const date = new Date();
         const doorNum = parseInt(this.getAttribute('data-num'));
         const doorDate = new Date(date.getFullYear(), 11, doorNum);
@@ -120,10 +115,15 @@ function createSnowflake(headerElement) {
     snowflake.innerHTML = '❄';
     snowflake.style.left = `${Math.random() * 100}vw`;
     snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    console.log("Creating snowflake for header:", headerElement);
     headerElement.appendChild(snowflake);
     setTimeout(() => snowflake.remove(), 5000);
 }
 
 headers.forEach(header => {
-    setInterval(() => createSnowflake(header), 500);
+    setInterval(() => {
+        console.log("Snowflake created for:", header);
+        createSnowflake(header);
+    }, 500);
 });
+

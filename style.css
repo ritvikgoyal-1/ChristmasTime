@@ -11,17 +11,14 @@ header {
     top: -10px;
     font-size: 24px;
     color: white;
-    animation: fall linear infinite;
+    animation: fall 5s linear infinite;
+    pointer-events: none;
+}
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
 }
 
-@keyframes fall {
-    0% {
-        transform: translateY(0) translateX(0);
-    }
-    100% {
-        transform: translateY(100vh) translateX(-50px);
-    }
-}
 
 #countdown {
     display: flex;
@@ -41,10 +38,10 @@ header {
 @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
 
 body {
+    background: linear-gradient(120deg, #1e3c72, #2a5298);
     background-size: 400% 400%;
     animation: backgroundAnimation 10s ease infinite;
     font-family: 'Mountains of Christmas', cursive;
-    font:'Mountains of Christmas', cursive;
 }
 
 @keyframes backgroundAnimation {
@@ -111,8 +108,6 @@ body {
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
     margin: 0;
-    transform: scale(1);
-
 }
 
 .today {
@@ -260,12 +255,11 @@ body {
     color: black;
 }
 
-.door-animation-test {
-    transform: scale(1.5);
-    transition: transform 0.5s ease-in-out;
+body {
+    background: linear-gradient(to bottom, #f8f9fa, #e3f2fd);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
-
 
 [data-num] {
     font-weight: bold;
@@ -291,12 +285,6 @@ body {
     border-color: rgb(255, 217, 0);
     border-width: .5dvb;
 }
-
-.door-animation-test {
-    transform: scale(1.5);
-    transition: transform 0.5s ease-in-out;
-}
-
 
 .modal {
     display: flex;
@@ -374,7 +362,7 @@ body {
     top: 10%;
     left: -10%;
     z-index: 10;
-    animation: santa 10s linear infinite;
+    animation: santa 9s linear infinite;
 }
 
 @keyframes santa {
